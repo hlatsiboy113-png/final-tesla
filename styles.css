@@ -5,7 +5,24 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 45px;
+  color: white;
+  opacity: 0.4;
+  transition: 0.3s;
+  pointer-events: auto;
+}
 
+.arrow:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.left { left: 25px; }
+.right { right: 25px; }
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -31,14 +48,21 @@
 
 /* HERO */
 .hero {
-  height: 100vh;
-  background: url("assets/hero.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   position: relative;
-  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ensures overlay sits above background but below text if needed */
+.hero-ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
 .hero-overlay {

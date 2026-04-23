@@ -12,7 +12,7 @@
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="logo">Electric</div>
+    <a class="logo">T E S L A</a>
 
     <ul class="nav-links">
       <li><a href="#">Models</a></li>
@@ -23,18 +23,41 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Model 3</h1>
+    <p>Experience the future of driving</p>
+  </div>
 
-    <div class="hero-content">
-      <h1>Drive the Future</h1>
-      <p>Electric performance redefined</p>
+  <!-- UI overlay -->
+  <div class="hero-ui">
+    <div class="arrow left">&#10094;</div>
+    <div class="arrow right">&#10095;</div>
 
-      <div class="buttons">
-        <button class="btn primary">Order Now</button>
-        <button class="btn secondary">Learn More</button>
-      </div>
-    </div>
-  </section>
+    .hero-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.hero-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.3;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* hover effect */
+.hero-dots span:hover {
+  opacity: 1;
+  transform: scale(1.5);
+}
 
   <!-- MODELS -->
   <section class="models">
