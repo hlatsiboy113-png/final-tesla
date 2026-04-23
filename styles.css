@@ -87,7 +87,31 @@
   margin-bottom: 20px;
   opacity: 0.9;
 }
+.hero-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
 
+.hero-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.3;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* hover effect */
+.hero-dots span:hover {
+  opacity: 1;
+  transform: scale(1.5);
+}
 /* BUTTONS */
 .btn {
   padding: 12px 25px;
